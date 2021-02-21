@@ -5,7 +5,7 @@ node('Tencent_Ubuntu') {
 
     stage('maven编译打包') {
         sh '''
-            . ~/.bash_profile
+            source ~/.bashrc
             
             export pwd=`pwd`
             export os_type=`uname`

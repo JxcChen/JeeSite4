@@ -1,11 +1,11 @@
-node('master') {
+node('Tencent_Ubuntu') {
     stage('同步源码') {
             git([url: 'git@gitee.com:11547299/jeesite4.git', branch: '${branch}'])
     }
 
     stage('maven编译打包') {
         sh '''
-            . ~/.bash_profile
+            source ~/.bashrc
             
             export pwd=`pwd`
             export os_type=`uname`
